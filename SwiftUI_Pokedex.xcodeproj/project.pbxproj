@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		AD1DB519299FBC00001224DC /* SwiftUI_PokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB518299FBC00001224DC /* SwiftUI_PokedexApp.swift */; };
-		AD1DB51B299FBC00001224DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB51A299FBC00001224DC /* ContentView.swift */; };
 		AD1DB51D299FBC01001224DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1DB51C299FBC01001224DC /* Assets.xcassets */; };
 		AD1DB520299FBC01001224DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1DB51F299FBC01001224DC /* Preview Assets.xcassets */; };
 		AD1DB52A299FC6F1001224DC /* PokedexListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB529299FC6F1001224DC /* PokedexListView.swift */; };
 		AD1DB52C299FC71F001224DC /* PokedexItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB52B299FC71F001224DC /* PokedexItemView.swift */; };
 		AD1DB52E299FC958001224DC /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB52D299FC958001224DC /* Pokemon.swift */; };
+		AD1DB530299FDABC001224DC /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB52F299FDABC001224DC /* PokemonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD1DB515299FBC00001224DC /* SwiftUI_Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1DB518299FBC00001224DC /* SwiftUI_PokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_PokedexApp.swift; sourceTree = "<group>"; };
-		AD1DB51A299FBC00001224DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AD1DB51C299FBC01001224DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD1DB51F299FBC01001224DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD1DB529299FC6F1001224DC /* PokedexListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexListView.swift; sourceTree = "<group>"; };
 		AD1DB52B299FC71F001224DC /* PokedexItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexItemView.swift; sourceTree = "<group>"; };
 		AD1DB52D299FC958001224DC /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		AD1DB52F299FDABC001224DC /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,6 @@
 				AD1DB527299FC185001224DC /* View */,
 				AD1DB526299FC15C001224DC /* Model */,
 				AD1DB518299FBC00001224DC /* SwiftUI_PokedexApp.swift */,
-				AD1DB51A299FBC00001224DC /* ContentView.swift */,
 				AD1DB51C299FBC01001224DC /* Assets.xcassets */,
 				AD1DB51E299FBC01001224DC /* Preview Content */,
 			);
@@ -96,6 +95,7 @@
 		AD1DB528299FC195001224DC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AD1DB52F299FDABC001224DC /* PokemonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -172,8 +172,8 @@
 			files = (
 				AD1DB52E299FC958001224DC /* Pokemon.swift in Sources */,
 				AD1DB52A299FC6F1001224DC /* PokedexListView.swift in Sources */,
+				AD1DB530299FDABC001224DC /* PokemonViewModel.swift in Sources */,
 				AD1DB52C299FC71F001224DC /* PokedexItemView.swift in Sources */,
-				AD1DB51B299FBC00001224DC /* ContentView.swift in Sources */,
 				AD1DB519299FBC00001224DC /* SwiftUI_PokedexApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

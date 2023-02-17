@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 struct Pokemon : Decodable, Identifiable{
@@ -13,15 +14,20 @@ struct Pokemon : Decodable, Identifiable{
     let name: String
     let imageUrl: String
     let type: String
+    var color: Color {
+        get{
+            switch type{
+            case "fire": return .red
+            case "poison" : return .green
+            case "water" : return .teal
+            case "electric" : return .yellow
+            case "psychic": return .purple
+            case "normal": return .orange
+            case "ground" : return .gray
+            case "flying" : return .blue
+            case "fairy": return .pink
+            default : return .indigo
+            }
+        }
+    }
 }
-
-
-let pokemonList : [Pokemon] = [
-    Pokemon(id: 1, name:"Bulbasour", imageUrl: "Bulbasour", type: "poison"),
-    Pokemon(id: 2, name:"Bulbasour", imageUrl: "Bulbasour", type: "poison"),
-    Pokemon(id: 3, name:"Bulbasour", imageUrl: "Bulbasour", type: "poison"),
-    Pokemon(id: 4, name:"Bulbasour", imageUrl: "Bulbasour", type: "poison"),
-    Pokemon(id: 5, name:"Bulbasour", imageUrl: "Bulbasour", type: "poison"),
-    Pokemon(id: 6, name:"Bulbasour", imageUrl: "Bulbasour", type: "poison"),
-    Pokemon(id: 7, name:"Bulbasour", imageUrl: "Bulbasour", type: "poison"),
-]

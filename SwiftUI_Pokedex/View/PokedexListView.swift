@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PokedexListView: View {
     
+    @ObservedObject var viewModel = PokemonViewModel()
+    
     var columns : [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -18,7 +20,7 @@ struct PokedexListView: View {
         NavigationView{
             ScrollView{
                 LazyVGrid(columns: columns,spacing: 16) {
-                    ForEach(pokemonList, id: \.id){ pokemon in
+                    ForEach(viewModel.pokemons, id: \.id){ pokemon in
                         PokedexItemView(pokemon: pokemon)
                     }
                 }

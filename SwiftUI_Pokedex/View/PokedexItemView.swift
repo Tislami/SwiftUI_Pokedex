@@ -14,7 +14,7 @@ struct PokedexItemView: View {
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
-                Text(pokemon.name)
+                Text(pokemon.name.capitalized)
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding(.top,4)
@@ -33,17 +33,20 @@ struct PokedexItemView: View {
                         })
                         .frame(width: 100,height: 24)
                     
-                    Image(pokemon.imageUrl)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 70,height: 70)
-                        .padding([.bottom,.trailing],4)
+                    AsyncImage(url: URL(string: pokemon.imageUrl)){ image in
+                        image.resizable()
+                            .scaledToFit()
+                        
+                            .padding([.bottom,.trailing],4)
+                    } placeholder: {
+                        ProgressView()
+                    }.frame(width: 70,height: 70)
                 }
             }
         }
-        .background(Color.green)
+        .background(pokemon.color)
         .cornerRadius(12)
-        .shadow(color: .green,radius: 6,x: 0,y: 0)
+        .shadow(color: pokemon.color,radius: 6,x: 0,y: 0)
     }
 }
 
