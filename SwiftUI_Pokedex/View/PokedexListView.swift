@@ -17,11 +17,14 @@ struct PokedexListView: View {
     ]
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ScrollView{
                 LazyVGrid(columns: columns,spacing: 16) {
                     ForEach(viewModel.pokemons, id: \.id){ pokemon in
-                        PokedexItemView(pokemon: pokemon)
+                        NavigationLink(destination:            PokedexDetailView(pokemon: pokemon), label: {
+                            PokedexItemView(pokemon: pokemon)
+                        })
+                        let _ = print(pokemon)
                     }
                 }
             }

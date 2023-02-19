@@ -36,7 +36,6 @@ struct PokedexItemView: View {
                     AsyncImage(url: URL(string: pokemon.imageUrl)){ image in
                         image.resizable()
                             .scaledToFit()
-                        
                             .padding([.bottom,.trailing],4)
                     } placeholder: {
                         ProgressView()
@@ -47,11 +46,5 @@ struct PokedexItemView: View {
         .background(pokemon.color)
         .cornerRadius(12)
         .shadow(color: pokemon.color,radius: 6,x: 0,y: 0)
-    }
-}
-
-struct PokemonCell_Previews: PreviewProvider {
-    static var previews: some View {
-        PokedexItemView(pokemon: pokemonList[0])
     }
 }
